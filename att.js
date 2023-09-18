@@ -5,7 +5,7 @@ const shuffle = (array) => {
   } 
   return array; 
 };
-
+let name_;
 
 let correct_answer = [];
 function letload() {
@@ -30,6 +30,7 @@ function lfg() {
   const searchParams = new URLSearchParams(window.location.search);
   let vv = searchParams.get("qc");
   let qdiff = searchParams.get("diff");
+  name_ = searchParams.get("name");
   fetch(
     `https://opentdb.com/api.php?amount=10&category=${vv}&difficulty=${qdiff}&type=multiple`
   )
@@ -84,7 +85,7 @@ function results() {
       score = score + 1;
     }
   }
-  document.getElementById("out").innerHTML = `Score: ${score}
+  document.getElementById("out").innerHTML = `Hey ${name_}, you scored ${score}/10.
   <p>To retake the test, kindly use the link below to navigate to the home page</p>
   <a href="index.html"><p>Home</p></a>`;
 }
