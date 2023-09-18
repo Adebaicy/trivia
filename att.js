@@ -86,5 +86,5 @@ function results() {
   }
   document.getElementById("out").innerHTML = `Score: ${score}
   <p>To retake the test, kindly use the link below to navigate to the home page</p>
-  <a href="1stpage.html"><p>Home</p></a>`;
+  <a href="index.html"><p>Home</p></a>`;
 }
